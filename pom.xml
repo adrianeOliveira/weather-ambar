@@ -15,7 +15,7 @@
 	<description>Weather demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>15</java.version>
+		<java.version>14</java.version>
 		<kotlin.version>1.4.21</kotlin.version>
 		<spring-cloud.version>2020.0.0-RC1</spring-cloud.version>
 	</properties>
@@ -48,6 +48,12 @@
 		<dependency>
 			<groupId>org.springframework.cloud</groupId>
 			<artifactId>spring-cloud-starter-openfeign</artifactId>
+		</dependency>
+
+		<dependency>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
 		<dependency>

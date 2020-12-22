@@ -10,13 +10,13 @@ import javax.persistence.ManyToOne
 
 @Entity
 data class ForecastWeather(
-    @Id @GeneratedValue @Column(name = "id_forecast_weather")
-    val id: Int,
+    @Id @Column(name = "id_forecast_weather")
+    val id: Int? = null,
     val date: LocalDate,
     val rainProbability: Int,
     val rainPrecipitation: Int,
     val minTemperature: Int,
     val maxTemperature: Int,
-    @ManyToOne @JoinColumn(name = "city_id_city", nullable = false)
-    val city: City
+    @ManyToOne @JoinColumn(name = "city_id_city")
+    val city: City? = null
 )

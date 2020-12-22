@@ -14,3 +14,8 @@ spring:
     properties:
       hibernate:
         format_sql: true
+
+weather:
+  forecast:
+    url: http://apiadvisor.climatempo.com.br/api/v1/forecast/locale/
+    token: b22460a8b91ac5f1d48f5b7029891b53

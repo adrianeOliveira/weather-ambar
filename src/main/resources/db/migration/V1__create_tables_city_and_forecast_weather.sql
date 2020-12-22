@@ -15,3 +15,9 @@ CREATE TABLE forecast_weather(
 	city_id_city int null,
 	foreign key(city_id_city) references city(id_city)
 );
+
+insert into city
+    values (4310, 'Araraquara', 'SP', 'BR');
+
+insert into forecast_weather (forecast_date, rain_probability, rain_precipitation, min_temp, max_temp, city_id_city)
+    values ('2020-12-22', 83, 30, 23, 30, 4310);

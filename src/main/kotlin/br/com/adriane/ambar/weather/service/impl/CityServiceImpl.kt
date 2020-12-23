@@ -5,6 +5,7 @@ import br.com.adriane.ambar.weather.repositories.CityRepository
 import br.com.adriane.ambar.weather.service.CityService
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
+import java.time.LocalDate
 
 @Service
 class CityServiceImpl(
@@ -20,6 +21,12 @@ class CityServiceImpl(
         }
        return cityRepository.save(city)
     }
+
+    override fun findCityWithMaxTemperatureByTime(initialDate: LocalDate, finalDate: LocalDate) =
+            cityRepository.findCityWithMaxTemperature(initialDate, finalDate)
+
+    override fun findAvgPrecipitationPerCity(initialDate: LocalDate, finalDate: LocalDate) =
+            cityRepository.findCitiesWithAvgPrecipitation(initialDate, finalDate)
 
 }
 

@@ -1,4 +1,4 @@
-package br.com.adriane.ambar.weather.rest.entities.response
+package br.com.adriane.ambar.weather.rest.entities.response.climateweather
 
 import java.time.LocalDate
 

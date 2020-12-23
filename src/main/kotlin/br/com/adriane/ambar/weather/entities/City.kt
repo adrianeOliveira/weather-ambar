@@ -12,3 +12,11 @@ data class City(
     val state: String,
     val country: String
 )
+
+data class CityAvgPrecipitation(
+        val id: Int,
+        val name: String,
+        val state: String,
+        val country: String,
+        val avgPrecipitation: Double
+)

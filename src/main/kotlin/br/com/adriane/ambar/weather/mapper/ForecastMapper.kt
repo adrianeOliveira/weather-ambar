@@ -1,7 +1,7 @@
 package br.com.adriane.ambar.weather.mapper
 
 import br.com.adriane.ambar.weather.entities.Forecast
-import br.com.adriane.ambar.weather.rest.entities.response.ClimateWeatherData
+import br.com.adriane.ambar.weather.rest.entities.response.climateweather.ClimateWeatherData
 import org.springframework.stereotype.Component
 
 @Component

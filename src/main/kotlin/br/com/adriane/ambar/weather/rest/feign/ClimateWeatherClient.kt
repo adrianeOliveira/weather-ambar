@@ -1,6 +1,6 @@
 package br.com.adriane.ambar.weather.rest.feign
 
-import br.com.adriane.ambar.weather.rest.entities.response.ClimateWeatherResponse
+import br.com.adriane.ambar.weather.rest.entities.response.climateweather.ClimateWeatherResponse
 import org.springframework.cloud.openfeign.FeignClient
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable

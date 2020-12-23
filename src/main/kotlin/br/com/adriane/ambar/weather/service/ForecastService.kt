@@ -11,4 +11,5 @@ interface ForecastService {
     fun insertForecast(forecast: Forecast): Forecast
 
     fun listAllForecastByCity(cityId: Int): List<Forecast>
+
 }

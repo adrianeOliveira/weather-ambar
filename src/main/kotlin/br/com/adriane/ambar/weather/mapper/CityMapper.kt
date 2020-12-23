@@ -1,16 +1,16 @@
 package br.com.adriane.ambar.weather.mapper
 
 import br.com.adriane.ambar.weather.entities.City
-import br.com.adriane.ambar.weather.rest.entities.CityResponse
+import br.com.adriane.ambar.weather.rest.entities.response.ClimateWeatherResponse
 import org.springframework.stereotype.Component
 
 @Component
 class CityMapper {
 
-    fun fromResponseToEntity(cityResponse: CityResponse) = City(
-                id = cityResponse.id,
-                name = cityResponse.name,
-                state = cityResponse.state,
-                country = cityResponse.country
+    fun fromResponseToEntity(climateWeatherResponse: ClimateWeatherResponse) = City(
+                id = climateWeatherResponse.id,
+                name = climateWeatherResponse.name,
+                state = climateWeatherResponse.state,
+                country = climateWeatherResponse.country
         )
 }

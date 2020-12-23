@@ -4,5 +4,6 @@ import br.com.adriane.ambar.weather.entities.City
 
 interface CityService {
     fun listAllCities(): List<City>
-    fun saveCity(cityRequestId: Int): City
+
+    fun insertCity(city: City): City
 }

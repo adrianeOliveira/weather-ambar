@@ -1,7 +1,7 @@
 package br.com.adriane.ambar.weather.mapper
 
 import br.com.adriane.ambar.weather.entities.City
-import br.com.adriane.ambar.weather.rest.entities.response.CityAvgPrecipitation
+import br.com.adriane.ambar.weather.rest.entities.response.CityAvgPrecipitationResponse
 import br.com.adriane.ambar.weather.rest.entities.response.CityResponse
 import br.com.adriane.ambar.weather.rest.entities.response.climateweather.ClimateWeatherResponse
 import org.springframework.stereotype.Component
@@ -24,7 +24,7 @@ class CityMapper {
     )
 
     fun cityAvgPrecipitationToResponse(cityAvgPrecipitation: br.com.adriane.ambar.weather.entities.CityAvgPrecipitation) =
-            CityAvgPrecipitation(
+            CityAvgPrecipitationResponse(
                     id = cityAvgPrecipitation.id,
                     name = cityAvgPrecipitation.name,
                     state = cityAvgPrecipitation.state,

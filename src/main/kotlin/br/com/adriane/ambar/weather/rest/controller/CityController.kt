@@ -57,6 +57,6 @@ class CityController(
                 .map(cityMapper::cityAvgPrecipitationToResponse)
 
         return AnalysisResponse(city = cityMapper.fromEntityToResponse(city),
-                avgPrecipitationList = avgPrecipitationList)
+                avgPrecipitationResponseList = avgPrecipitationList)
     }
 }

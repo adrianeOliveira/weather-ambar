@@ -8,6 +8,7 @@ import br.com.adriane.ambar.weather.repositories.ForecastRepository
 import br.com.adriane.ambar.weather.rest.entities.request.CityRequest
 import br.com.adriane.ambar.weather.rest.feign.ClimateWeatherClient
 import br.com.adriane.ambar.weather.service.ForecastService
+import org.slf4j.LoggerFactory
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -19,18 +20,22 @@ class ForecastServiceImpl(
         val forecastRepository: ForecastRepository
 ): ForecastService {
 
+    private val log = LoggerFactory.getLogger(ForecastServiceImpl::class.java)
+
     override fun buildForecastFromRequest(cityRequest: CityRequest): Pair<City, List<Forecast>> {
+        log.info("M=buildForecastFromRequest, I= buscando cidade e previsão, cityRequest = $cityRequest")
         val response = climateWeatherClient.forecast15DaysByCity(cityRequest.cityId)
         val city = cityMapper.fromResponseToEntity(response)
 
         val forecastList = response.data
                 .map(forecastMapper::fromResponseToEntity)
-
+        log.info("M=buildForecastFromRequest, I=consulta finalizada, city = $city")
         return Pair(city, forecastList)
     }
 
     @Transactional
     override fun insertForecast(forecast: Forecast): Forecast {
+        log.info("M=insertForecast, forecast = $forecast")
         if (forecast.id == null) {
             return forecastRepository.save(forecast)
         }

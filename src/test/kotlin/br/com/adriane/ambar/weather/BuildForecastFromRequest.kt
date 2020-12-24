@@ -30,7 +30,8 @@ class BuildForecastFromRequest {
 	@InjectMocks
 	val forecastMapper =  ForecastMapper()
 
-	val climateWeatherClient = Mockito.mock(ClimateWeatherClient::class.java)
+	val climateWeatherClient =
+			Mockito.mock(ClimateWeatherClient::class.java)
 
 	@InjectMocks
 	val forecastService =  ForecastServiceImpl(
